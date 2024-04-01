@@ -1,0 +1,139 @@
+.topHeaderSk {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  animation: skeleton 1s ease infinite alternate;
+
+  @media(max-width: 1099px) {
+    justify-content: start;
+    padding-block-end: 15px;
+  }
+
+  &__img {
+    width: 70px;
+    height: 20px;
+    background-color: rgb(244, 211, 216);
+  }
+}
+
+@keyframes skeleton {
+  to {
+    opacity: 0.5;
+  }
+}
+
+.productsWrap {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  max-width: 1440px;
+  padding: 30px 20px 0;
+  // margin: 0 auto;
+  column-gap: 20px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+
+  .products{
+    &__sideLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      padding-block-start: 80px;
+      animation: skeleton 1s ease infinite alternate;
+      
+      @media (max-width: 760px) {
+        display: none;
+      }
+  
+      &__item {
+        width: 90px;
+        height: 25px;
+        background-color: rgb(245, 232, 232);
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      padding-block-start: 20px;
+
+      @media(max-width: 500px) {
+        padding-block-start: 35px;
+      }
+
+      &__images {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        animation: skeleton 1s ease infinite alternate;
+      }
+
+      &__img {
+        width: 20%;
+        height: 400px;
+        background-color: rgb(245, 232, 232);
+
+        @media(max-width: 1100px) {
+          width: 25%;
+          height: 300px;
+        }
+        @media(max-width: 760px) {
+          width: 40%;
+        }
+        @media(max-width: 360px) {
+          height: 200px;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &__item {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: rgb(245, 232, 232);
+        animation: ball 0.5s ease infinite alternate;
+
+        @media(max-width: 1100px) {
+          width: 20px;
+          height: 20px;
+        }
+
+        &--item1 {
+          animation-delay: 0.1s;
+        }
+
+        &--item2 {
+          animation-delay: 0.2s;
+        }
+      }
+
+      &__text {
+        text-align: center;
+      }
+
+      &__wrap {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@keyframes ball {
+  to {
+    transform: translateY(-10px);
+  }
+}

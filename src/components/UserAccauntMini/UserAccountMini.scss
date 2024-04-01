@@ -1,0 +1,72 @@
+.miniAccount {
+  padding: 24px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__logIn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__link {
+      min-height: 48px;
+      width: 100%;
+      background-color: rgb(238, 109, 130);
+      color: aliceblue;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+
+  &__register {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__link {
+      min-height: 48px;
+      width: 100%;
+      background-color: #fff;
+      border: 2px solid rgb(238, 109, 130);
+      color: rgb(238, 109, 130);
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+
+  &__signIn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__name {
+      font-size: 18px;
+      font-weight: 500;
+      color: black;
+    }
+
+    &__btn {
+      margin-block-start: 10px;
+      font-size: 18px;
+      color: red;
+      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 7px;
+
+
+      &__img {
+        height: 100%;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        transform: translateY(5%);
+      }
+    }
+  }
+}

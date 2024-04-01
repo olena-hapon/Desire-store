@@ -1,0 +1,17 @@
+export interface Product {
+  id: string,
+  title: string,
+  price: number,
+  discountPrice: number,
+  desc: string,
+  isNew: boolean,
+  category: string,
+  subCategory: string,
+  aviable: [{color: string, size: string, quantity: number}],
+  color: string,
+  colors: string[],
+  images: string[],
+  img2?: string,
+  relatedProdId?: string,
+  relatedProdTitle?: string,
+}

@@ -1,0 +1,44 @@
+.emptyCart {
+  max-width: 80vw;
+  margin: auto;
+  text-align: center;
+
+  &__title {
+    font-size: 33px;
+    font-weight: 500;
+    margin: 45px;
+  }
+  
+  &__continue {
+    font-size: 14px;
+    margin: 40px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    & a:hover {
+      color: rgb(238, 109, 130);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 50px;
+    padding: 20px 10px;
+    max-width: 600px;
+    border: 2px solid rgb(238, 109, 130);
+    margin: 0 auto 50px;
+    justify-content: space-around;
+  }
+
+  &__item a {
+    line-height: 3;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: rgb(238, 109, 130);
+    }
+  }
+}

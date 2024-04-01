@@ -1,0 +1,119 @@
+.categories {
+  width: 100%;
+  
+    &__wrapper {
+      width: fit-content;
+      margin: auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 350px);
+      gap: 10px;
+      grid-template-areas:
+        "sweaterWoman dresses jackets sweaterMan"
+        "sales dresses new new";
+
+      @media(max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px);
+        gap: 10px;
+        grid-template-areas:
+          "sweaterWoman dresses jackets"
+          "sweaterMan sales new";
+      }
+
+      @media(max-width: 700px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 350px);
+        gap: 10px;
+        grid-template-areas:
+          "sweaterWoman"
+          "dresses"
+          "jackets"
+          "sweaterMan"
+          "sales"
+          "new";
+      }
+    }
+}
+
+.category {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+    &__wrapper {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__dresses {
+      grid-area: dresses;
+    }
+
+    &__jackets {
+    grid-area: jackets;
+  }
+
+  &__sweaterWoman {
+    grid-area: sweaterWoman;
+  }
+
+  &__sweaterMan {
+    grid-area: sweaterMan;
+  }
+
+  &__new {
+    grid-area: new;
+  }
+
+  &__sales {
+    grid-area: sales;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    text-transform: uppercase;
+    transform: translate(-50%);
+  }
+  
+  &__button {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
+    background-color: aliceblue;
+    color: rgb(250, 176, 188);
+    // border: 1px solid rgb(250, 176, 188);
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(238, 109, 130);
+      color: aliceblue;
+    }
+
+    @media(max-width: 1182px) {
+      font-size: 14px;
+    }
+  }
+}

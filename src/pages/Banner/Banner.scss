@@ -1,0 +1,85 @@
+.banner {
+  width: 100%;
+
+  &__wrapper {
+    width: 90%;
+    max-width: 2100px;
+    background-color: rgb(245, 232, 232);
+    margin: 0 auto;
+    padding: 0 0 0 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(max-width: 760px) {
+      padding: 0 0 0 60px;
+    }
+    @media(max-width: 460px) {
+      padding: 0 0 0 40px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-end: 10px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #4e4d4d;
+    text-transform:uppercase;
+
+    @media(max-width: 760px) {
+      font-size: 22px;
+    }
+    @media(max-width: 460px) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    margin-block-end: 15px;
+
+    @media(max-width: 460px) {
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 500px;
+    vertical-align: bottom;
+
+    @media(max-width: 1400px) {
+      height: 400px;
+    }
+    @media(max-width: 460px) {
+      height: 250px;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+    background-color: aliceblue;
+    color: rgb(250, 176, 188);
+    padding: 10px 10px;
+    font-size: 18px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(238, 109, 130);
+      color: aliceblue;
+    }
+
+    @media(max-width: 1182px) {
+      font-size: 14px;
+    }
+  }
+}

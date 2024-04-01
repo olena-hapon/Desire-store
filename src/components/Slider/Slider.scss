@@ -1,0 +1,162 @@
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  // padding-top: 163px;
+  transition: all 0.3s linear;
+
+  @media(max-width: 760px) {
+    height: 70vh;
+  }
+
+  // &__not-padding {
+  //   transition: all 0.3s linear ;
+  //   padding-top: 0;
+  //   width: 100%;
+  //   height: 100vh;
+  //   position: relative;
+  // }
+ 
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__images-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1s ease-in-out;
+  }
+
+  &__link {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__links {
+    position: absolute;
+    flex-direction: column;
+    top: 15%;
+    right: 7%;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+
+    @media(max-width:1100px) {
+      right: 5%;
+      font-size: 38px;
+    }
+    @media(max-width:760px) {
+      right: 5%;
+      font-size: 32px;
+    }
+
+    @media(max-width: 460px) {
+      font-size: 28px;
+      right: 25%;
+      top: 50%;
+    }
+
+
+
+    &:hover {
+      // color: rgb(235 199 231 / 69%);
+      color: rgb(238, 109, 130);
+    }
+
+    &__to {
+      line-height: 15%;
+    }
+
+    &--check {
+      text-decoration: underline;
+    }
+  }
+
+  &__image {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+
+    @media(max-width: 1100px) {
+      
+      width: 30vw;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+    color: none;
+
+    &:hover {
+      // border-color: rgb(228 66 209 / 69%);
+      border:1px solid #fff;
+      background-color: rgb(250, 176, 188);
+    }
+
+    &--left {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 10vw;
+    }
+
+    &--right {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 10vw;
+ 
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    display: flex;
+    margin: auto;
+    gap: 10px;
+  }
+}
+
+.pagination-dot {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  
+  &--active {
+    background-color: rgb(250, 176, 188);
+  }
+}
+
+.arrow {
+  border: none;
+}

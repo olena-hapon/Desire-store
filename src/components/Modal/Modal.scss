@@ -1,0 +1,154 @@
+.modal {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  // z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+
+  &__active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2000;
+  }
+  
+
+  &__styled {
+    // position: fixed;
+    // top: 57%;
+    // left: 50%;
+    background: #fff;
+    width: auto;
+    height: auto;
+    // z-index: -1;
+    // transform: translate(-50%, -50%);
+    box-shadow: rgba(77, 77, 77, 0.15) 0px 4px 16px 0px;
+    transform: scale(0.5);
+    transition: 1s all;
+
+    @media(max-width: 1000px) {
+      width: 100%;
+      position: fixed;
+      bottom: -100%;
+      left:0;
+    }
+
+    &__active {
+      transform: scale(1);
+      transition: 0.3s all;
+
+      // z-index: 2000;
+
+      @media(max-width: 1000px) {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding: 50px 60px;
+  }
+
+  &__close {
+    background: center/ contain no-repeat url('../../images/Cross.svg');
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    background-color: rgb(238, 109, 130);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-block-end: 10px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 18px;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -70%) rotate(45deg);
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    color: inherit;
+    font-weight: 400;
+    margin-block-end: 20px;
+  }
+
+  &__body__wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 90px auto;
+    gap: 30px;
+    margin-block-end: 30px;
+  }
+
+  &__img {
+    height: auto;
+    max-width: 100%;
+    background-color: aqua;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 100%;
+
+    @media(max-width: 640px) {
+      grid-template-columns: 1fr;;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: rgb(238, 109, 130);
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+    border: 1px solid rgb(238, 109, 130);
+    padding: 12px 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(238, 109, 130);
+      color: #fff;
+    }
+  }
+}

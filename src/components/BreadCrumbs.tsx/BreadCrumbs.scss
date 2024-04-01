@@ -1,0 +1,30 @@
+.breadCrumbs {
+  padding: 15px 0;
+  text-align: center;
+
+  &__name:last-child {
+    pointer-events: none;
+    color: grey;
+  }
+
+  &__name::before {
+    content: '/';
+    margin: 0 10px;
+    display: inline-block;
+    height: 10px;
+    width: 5px;
+    color: inherit;
+  }
+
+  &__home--link:hover {
+    color: rgb(238, 109, 130);
+  }
+
+  &__link {
+    text-transform: capitalize;
+
+    &:hover {
+      color: rgb(238, 109, 130);
+    }
+  }
+}

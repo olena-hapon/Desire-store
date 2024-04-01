@@ -1,0 +1,35 @@
+.productsContainer {
+  padding: 55px 40px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+  "breadcrumbs breadcrumbs"
+  "sideBar rightSide";
+  column-gap: 25px;
+
+  @media(max-width:1099px) {
+  //   grid-template-columns: 1fr;
+  //   grid-template-areas:
+  // "breadcrumbs"
+  // "sideBar"
+  // "rightSide";
+  // }
+  display: block;
+}
+}
+
+
+.breadcrumbs {
+  grid-area: breadcrumbs;
+  align-items: start;
+}
+
+.sideBar {
+  grid-area: sideBar;
+}
+
+.rightSide {
+  grid-area: rightSide;
+}
